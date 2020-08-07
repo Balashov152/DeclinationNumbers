@@ -9,27 +9,24 @@
 import Foundation
 
 public struct Declination {
-    static public func get(localizeNumber number: Int, forOne one: String? = nil, format: (one: String, two: String, eleven: String)) -> String {
-        
-        let decades = number / 10
-        let last = number % 10
-        
-        if number == 1 {
+    public static func get(localizeNumber number: Int, withNumber: Bool = true, forOne one: String? = nil, format: (one: String, two: String, eleven: String)) -> String {
+        let decades = (number % 100) / 10
+        let last = (number % 100) % 10
+
+        if number == 0 {
+            return withNumber ? "\(number) \(format.eleven)" : "\(format.eleven)"
+        } else if number == 1 {
             let localizeOne = (one?.isEmpty ?? true) ? "\(number)" : one!
-            return "\(localizeOne) \(format.one)"
-        } else if decades <= 1 {
-            if 2 ... 4 ~= number {
-                return "\(number) \(format.two)"
-            } else {
-                return "\(number) \(format.eleven)"
-            }
-        } else if decades > 1 {
+            return withNumber ? "\(localizeOne) \(format.one)" : "\(format.one)"
+        } else if decades == 1 {
+            return withNumber ? "\(number) \(format.eleven)" : "\(format.eleven)"
+        } else if decades < 1 || decades > 1 {
             if last == 1 {
-                return "\(number) \(format.one)"
+                return withNumber ? "\(number) \(format.one)" : "\(format.one)"
             } else if 2 ... 4 ~= last {
-                return "\(number) \(format.two)"
+                return withNumber ? "\(number) \(format.two)" : "\(format.two)"
             } else {
-                return "\(number) \(format.eleven)"
+                return withNumber ? "\(number) \(format.eleven)" : "\(format.eleven)"
             }
         }
         return ""

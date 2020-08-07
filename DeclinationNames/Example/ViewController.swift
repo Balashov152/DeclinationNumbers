@@ -13,17 +13,35 @@ class ViewController: UITableViewController {
 
     @IBOutlet weak var oneTextField: UITextField!
     
-    @IBOutlet weak var formatOneTextField: UITextField!
-    @IBOutlet weak var formatTwoTextField: UITextField!
-    @IBOutlet weak var formatElevenTextField: UITextField!
+    @IBOutlet weak var formatOneTextField: UITextField! {
+        didSet {
+            formatOneTextField.text = "Товар"
+        }
+    }
+    @IBOutlet weak var formatTwoTextField: UITextField! {
+        didSet {
+            formatTwoTextField.text = "Товара"
+        }
+    }
+    @IBOutlet weak var formatElevenTextField: UITextField! {
+        didSet {
+            formatElevenTextField.text = "Товаров"
+        }
+    }
     
     private func createDataSource() -> [String] {
         var data: [String] = []
-        for i in 0 ..< 40 {
-        data.append(Declination.get(localizeNumber: i, forOne: oneTextField.text,
-                                    format: (formatOneTextField.text ?? "",
-                                             two: formatTwoTextField.text ?? "",
-                                             eleven: formatElevenTextField.text ?? "")))
+        for i in 0 ... 20 {
+            data.append(Declination.get(localizeNumber: i, forOne: oneTextField.text,
+                                        format: (formatOneTextField.text ?? "",
+                                                 two: formatTwoTextField.text ?? "",
+                                                 eleven: formatElevenTextField.text ?? "")))
+        }
+        for i in 90 ... 130 {
+            data.append(Declination.get(localizeNumber: i, forOne: oneTextField.text,
+                                        format: (formatOneTextField.text ?? "",
+                                                 two: formatTwoTextField.text ?? "",
+                                                 eleven: formatElevenTextField.text ?? "")))
         }
         return data
     }
