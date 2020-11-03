@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import DeclinationNumbers
 
 class ViewController: UITableViewController {
 
+    @IBOutlet weak var withNumberSwitch: UISwitch!
     @IBOutlet weak var oneTextField: UITextField!
     
     @IBOutlet weak var formatOneTextField: UITextField! {
@@ -32,16 +34,17 @@ class ViewController: UITableViewController {
     private func createDataSource() -> [String] {
         var data: [String] = []
         for i in 0 ... 20 {
-            data.append(Declination.get(localizeNumber: i, forOne: oneTextField.text,
-                                        format: (formatOneTextField.text ?? "",
-                                                 two: formatTwoTextField.text ?? "",
-                                                 eleven: formatElevenTextField.text ?? "")))
+            data.append(Declination.decline(number: i, withNumber: withNumberSwitch.isOn, forOne: oneTextField.text,
+                                            format: .init(one: formatOneTextField.text ?? "",
+                                                          two: formatTwoTextField.text ?? "",
+                                                          eleven: formatElevenTextField.text ?? "")))
         }
         for i in 90 ... 130 {
-            data.append(Declination.get(localizeNumber: i, forOne: oneTextField.text,
-                                        format: (formatOneTextField.text ?? "",
-                                                 two: formatTwoTextField.text ?? "",
-                                                 eleven: formatElevenTextField.text ?? "")))
+            data.append(Declination.decline(number: i, withNumber: withNumberSwitch.isOn,
+                                            forOne: oneTextField.text,
+                                            format: .init(one: formatOneTextField.text ?? "",
+                                                          two: formatTwoTextField.text ?? "",
+                                                          eleven: formatElevenTextField.text ?? "")))
         }
         return data
     }

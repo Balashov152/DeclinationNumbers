@@ -1,0 +1,16 @@
+PODS:
+  - DeclinationNumbers (0.1.0)
+
+DEPENDENCIES:
+  - DeclinationNumbers (from `../`)
+
+EXTERNAL SOURCES:
+  DeclinationNumbers:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DeclinationNumbers: 807f4cb994059faa37b5c285c68cdf64094c2e96
+
+PODFILE CHECKSUM: 2bf951beb0610e5ad320e98471397f856fcd3a56
+
+COCOAPODS: 1.10.0

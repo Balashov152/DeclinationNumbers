@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oF8-2D-Dvh">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oF8-2D-Dvh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +18,34 @@
                         <sections>
                             <tableViewSection id="C22-Y5-bPn">
                                 <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="58" id="t2j-tI-MNj">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t2j-tI-MNj" id="hTg-YZ-47y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2D-Jp-o6m">
+                                                    <rect key="frame" x="343" y="13.5" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Включать цифру в текст" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uF-Up-CYZ">
+                                                    <rect key="frame" x="20" y="18.5" width="192.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0uF-Up-CYZ" firstAttribute="leading" secondItem="hTg-YZ-47y" secondAttribute="leading" constant="20" symbolic="YES" id="7ai-I5-9Cm"/>
+                                                <constraint firstItem="0uF-Up-CYZ" firstAttribute="centerY" secondItem="hTg-YZ-47y" secondAttribute="centerY" id="FJc-lU-pvv"/>
+                                                <constraint firstItem="z2D-Jp-o6m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0uF-Up-CYZ" secondAttribute="trailing" constant="20" id="Lyb-lL-BwF"/>
+                                                <constraint firstAttribute="trailing" secondItem="z2D-Jp-o6m" secondAttribute="trailing" constant="22" id="XXs-ic-mWv"/>
+                                                <constraint firstItem="z2D-Jp-o6m" firstAttribute="centerY" secondItem="hTg-YZ-47y" secondAttribute="centerY" id="kmg-HY-BPA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="58" id="p68-49-qKp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                        <rect key="frame" x="0.0" y="86" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p68-49-qKp" id="zgD-SW-75f">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
@@ -29,7 +53,6 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Один/Одна/Одно (опционально)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPW-o0-rmM">
                                                     <rect key="frame" x="20" y="11" width="374" height="36"/>
-                                                    <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -43,7 +66,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="58" id="2ol-h2-eoN">
-                                        <rect key="frame" x="0.0" y="58" width="414" height="58"/>
+                                        <rect key="frame" x="0.0" y="144" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ol-h2-eoN" id="hpj-Gc-4mw">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
@@ -51,7 +74,6 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Если один элемент, то" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9JU-MT-4rc">
                                                     <rect key="frame" x="20" y="11" width="374" height="36"/>
-                                                    <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -65,7 +87,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="58" id="rg5-3l-2X2">
-                                        <rect key="frame" x="0.0" y="116" width="414" height="58"/>
+                                        <rect key="frame" x="0.0" y="202" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rg5-3l-2X2" id="CXJ-PY-BCL">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
@@ -73,7 +95,6 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Если два элемента, то" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baQ-iM-udP">
                                                     <rect key="frame" x="20" y="11" width="374" height="36"/>
-                                                    <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -87,7 +108,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="58" id="Sfw-lU-0Uq">
-                                        <rect key="frame" x="0.0" y="174" width="414" height="58"/>
+                                        <rect key="frame" x="0.0" y="260" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sfw-lU-0Uq" id="jRn-gX-05o">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
@@ -95,7 +116,6 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Если одиннадцать элементов, то" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-W3-OrR">
                                                     <rect key="frame" x="20" y="11" width="374" height="36"/>
-                                                    <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -109,13 +129,13 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="58" id="h7g-BK-YXH">
-                                        <rect key="frame" x="0.0" y="232" width="414" height="58"/>
+                                        <rect key="frame" x="0.0" y="318" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h7g-BK-YXH" id="LOx-Hc-bQe">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69o-ls-sLH">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69o-ls-sLH">
                                                     <rect key="frame" x="20" y="11" width="374" height="36"/>
                                                     <state key="normal" title="Show"/>
                                                     <connections>
@@ -145,6 +165,7 @@
                         <outlet property="formatOneTextField" destination="9JU-MT-4rc" id="WyZ-El-Uvd"/>
                         <outlet property="formatTwoTextField" destination="baQ-iM-udP" id="mZg-ms-6jj"/>
                         <outlet property="oneTextField" destination="iPW-o0-rmM" id="k97-sx-mjV"/>
+                        <outlet property="withNumberSwitch" destination="z2D-Jp-o6m" id="Dc6-aX-hGG"/>
                         <segue destination="wbb-vc-9WO" kind="show" identifier="show_data" id="YhK-6w-vnJ"/>
                     </connections>
                 </tableViewController>

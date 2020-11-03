@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DeclinationNumbers_Example' do
+  pod 'DeclinationNumbers', :path => '../'
+
+  target 'DeclinationNumbers_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
