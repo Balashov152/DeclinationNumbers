@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-    Read README.md
+      DeclinationNumbers uses for decline russian words for numbers. For more info: Read README.md.
                        DESC
 
   s.homepage         = 'https://github.com/Balashov152/DeclinationNumbers'
