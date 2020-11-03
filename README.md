@@ -9,12 +9,10 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 Small project for declination names to numbers on russian language. Example:
 
 ### call
-``get(localizeNumber: i, one: "Один", format: ("час", "часа", "часов")) + " назад"``
+``decline(number: i, forOne: "Один", withNumber: true, format: .init(one: "час", two: "часа", eleven: "часов")) + " назад"``
 
 ### return 
 ``0 часов назад, 
@@ -43,7 +41,7 @@ Small project for declination names to numbers on russian language. Example:
 
 
 ### call
-``get(localizeNumber: i, format: ("событие", "события", "событий")``
+``decline(number: i, withNumber: true, format: .init(one: "событие", two: "события", eleven: "событий")``
 
 ### return 
 ``0 событий, 
